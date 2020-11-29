@@ -8,7 +8,7 @@ enum {FBO = 0, IBL = 1};
 int main(int argc, char *argv[])
 {
 	int recipe = FBO;
-	recipe = IBL;
+	//recipe = IBL;
 
 	SceneRunner runner("FrameBufferObject", 1280, 720, 4);
 	std::unique_ptr<Scene> scene;

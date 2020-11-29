@@ -1,2 +1,8 @@
 
 FrameBufferObject/x64/Debug/
+
+x64/Release/
+
+.vs/FrameBufferObject/v16/
+
+FrameBufferObject/x64/Release/
