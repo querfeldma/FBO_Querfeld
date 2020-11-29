@@ -52,8 +52,8 @@ void main() {
     if(use_gamma)   
         irradiance = pow(irradiance, vec3(1.0f/gamma));
 
-    vec3 diffuse    = irradiance * texture(ColorTex, TexCoord).rgb;
-    vec3 ambient    = (kD * diffuse); 
+    vec3 diffuse = irradiance * texture(ColorTex, TexCoord).rgb;
+    vec3 ambient = (kD * diffuse); 
 
 
     // Look up incoming radiance from diffuse cube map
@@ -68,5 +68,5 @@ void main() {
     if(use_schlick)
         color = ambient;
 
-    FragColor = vec4( color, 1 );
+    FragColor = vec4(color, 1.0f);
 }

@@ -4,7 +4,7 @@
 Fbo::Fbo(int width, int height, int attachment) 
 : width(width), height(height)
 {
-    std::cout << "FBO-CTOR" << std::endl;
+    //std::cout << "FBO-CTOR" << std::endl;
 
     //generate and bind fbo
     glGenFramebuffers(1, &fboHandle);
@@ -71,7 +71,7 @@ void Fbo::unbind()
 
 Fbo::~Fbo() 
 {
-    std::cout << "FBO-DTOR" << std::endl;
+    //std::cout << "FBO-DTOR" << std::endl;
     glDeleteTextures(1, &textureHandle);
     glDeleteFramebuffers(1, &fboHandle);
     

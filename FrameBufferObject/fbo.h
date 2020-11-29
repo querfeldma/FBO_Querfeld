@@ -1,8 +1,6 @@
 #pragma once
 #include <glad\glad.h>
 
-enum {COLOR = 0, DEPTH = 1};
-
 class Fbo {
 private:
     GLuint fboHandle;
@@ -11,6 +9,8 @@ private:
     GLuint width, height;
 
 public:
+    enum { COLOR = 0, DEPTH = 1 };
+
     Fbo(int width, int height, int attachment = COLOR);
 
     ~Fbo();

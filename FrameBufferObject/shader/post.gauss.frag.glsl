@@ -23,20 +23,23 @@ void main()
 
 
     //gauss
-    float kernel[9] = float[](
-    1.0 / 16, 2.0 / 16, 1.0 / 16,
-    2.0 / 16, 4.0 / 16, 2.0 / 16,
-    1.0 / 16, 2.0 / 16, 1.0 / 16  
-    );
+    float kernel[9] = float[]
+    (1.0/16, 2.0/16, 1.0/16,
+    2.0/16, 4.0/16, 2.0/16,
+    1.0/16, 2.0/16, 1.0/16 );
     
     vec3 sampleTex[9];
     for(int i = 0; i < 9; i++)
     {
         sampleTex[i] = vec3(texture(overlayTexture, textureCoords + offsets[i]));
     }
+
     vec3 col = vec3(0.0);
+
     for(int i = 0; i < 9; i++)
+    {
         col += sampleTex[i] * kernel[i];
+    }
     
     FragColor = vec4(col, 1.0);
 }  
